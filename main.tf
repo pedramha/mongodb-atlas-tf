@@ -20,7 +20,7 @@ resource "mongodbatlas_project_ip_access_list" "ip" {
   cidr_block = var.cidr  
   comment    = "IP Address for accessing the cluster"
 }
-resource "mongodbatlas_cluster" "cluster1" {
+resource "mongodbatlas_cluster" "cluster" {
   project_id             = mongodbatlas_project.project.id
   name                   = var.cluster_name
   mongo_db_major_version = var.mongodbversion
